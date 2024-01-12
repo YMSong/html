@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+/* 헤더부분 */
+.header {
+    /* background-image: url("Sewage-Wastewater-Treatment-of-Septic-Tank.jpg"); */
+    /* background-size: contain;
+    background-repeat: no-repeat; */
+    /* width: 960px; */
+    background-color:rgb(180, 197, 243);
+    display: flex;
+    flex-direction: row;    
+    font-size: 21px;
+    font-weight: bold;
+    
+}
+.header>img {
+    height: 39px;
+    background-color: transparent;
+        padding: 0 0 0 0;
+    /* background-color: aqua; 확인용 */
+}
+
+.header>div {
+    /* background-color: red; 확인용 */
+    vertical-align: baseline;
+    padding: 0 0 0 0;
+    /* vertical-align:bottom; */
+}
+
+
+body {background-color: rgb(237, 241, 245);}
+/* 콘텐츠 부분 */
+.content_wrap {
+    /* width: 960px; */
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(217, 245, 217);
+    padding: 3px 3px 3px 30px ;
+    margin: 0% 0% 0% 0%;
+    border: 1.2px solid white;
+}
+.content_wrap > div {       
+    padding: 12px 12px 12px 12px;
+    margin: 3px 3px 3px 3px;
+    border: 1.2px solid green;
+}
+.menu1 { flex: 1 ; }
+.menu2 { flex: 1.5 ; }
+.menu3 { flex: 2 ; }
+
+
+.footer_up_wrap {
+    /* width: 960px; */
+    background-color: rgb(180, 197, 243);
+    padding: 12px 12px 12px 12px;    
+}
+
+.footer_co_name {
+    font-size: 19.2px;
+    font-weight: bold;
+    margin: 0 0 0 0;
+}
+.footer_co_name>img {
+    height: 21px;
+}
+
+.footer_co_content {
+    margin-left: 1.2%;
+}
+.tc_sp {
+    width: 111px;
+}
+/* 면허보유현황 */
+.footer_down_wrap {
+    /* width: 960px; */
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(180, 197, 243);
+    padding: 12px 12px 12px 39px ;
+    margin: 0% 0% 0% 0%;
+    /* border: 1.2px solid gray; */
+}
+
+.footer_down1 {    
+    flex: 1;
+    border: 1.2px solid gray;
+    background-color: transparent;
+    /* line-height: 120%; */
+    padding: 4.8px 4.8px 4.8px 4.8px;    
+}
+.footer_down2  {
+    flex: 1.5;
+    border: 1.2px solid gray;
+    background-color: transparent;    
+    line-height: 100%;
+    padding: 4.8px 4.8px 4.8px 4.8px;
+}
+.footer_down2>ul {
+    
+}
+

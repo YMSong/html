@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- 작업목표 교육완료와 미완료를 구분하여 미완료일 경우 
+    링크(교육사이트 https://www.eledu.co.kr )로 이동 
+    리스트는 mongodb atlas 활용(아이디 tjdwls399 / 비번: tjdwls9804! )
+    교육완료 후 체크박스에 체크하면 완료로 변경 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023년 1분기 법정교육</title>
+    <style>
+        /* .img_dualTab {
+            height: 500px;
+            width: 100%;
+            background-image: url("../image/dualTab.JPG");
+            color: beige;
+            background-size: contain;
+            background-repeat: no-repeat;
+            } 
+        */
+        .list {
+            font-size: 17.4px;
+            /* 주석주석 */
+        }
+
+        .list_middle_test {
+            font-size: 17.4px;
+        }
+
+        .caution1 {
+            color: red;
+        }
+
+        .box_edu {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .box_edu_co {
+            flex: 1;
+            border: 1.2px gray solid;
+        }
+    </style>
+</head>
+
+<script>
+    //(주)성진환경건설의 직원전체 데이터베이스로 변경(mongoDB atlas)
+    let list_sjenc = [
+        { '이름': '유영창', '생년월일': '670930', '통신사': 'LG', '휴대폰': '010-3826-9988', '중간': 50, '최종': '??' },
+        { '이름': '나대연', '생년월일': '671211', '통신사': 'SKT', '휴대폰': '010-9393-5472', '중간': 90, '최종': 100 },
+        { '이름': '', '생년월일': '', '통신사': 'SKT', '휴대폰': '', '중간': 0, '최종': 0 },
+        { '이름': '', '생년월일': '', '통신사': 'SKT', '휴대폰': '', '중간': 0, '최종': 0 },
+        { '이름': '', '생년월일': '', '통신사': 'SKT', '휴대폰': '', '중간': 0, '최종': 0 },
+        { '이름': '', '생년월일': '', '통신사': 'SKT', '휴대폰': '', '중간': 0, '최종': 0 },
+        { '이름': '', '생년월일': '', '통신사': 'SKT', '휴대폰': '', '중간': 0, '최종': 0 },
+        { '이름': '', '생년월일': '', '통신사': 'SKT', '휴대폰': '', '중간': 0, '최종': 0 },
+        { '이름': '', '생년월일': '', '통신사': 'SKT', '휴대폰': '', '중간': 0, '최종': 0 },
+        { '이름': '', '생년월일': '', '통신사': 'SKT', '휴대폰': '', '중간': 0, '최종': 0 }
+    ]
+    console.log(list_sjenc)
+
+    //(주)신도환경의 직원전체
+    let list_sindo = [
+        { '이름': '유영창', '생년월일': '670930', '통신사': 'LG', '휴대폰': '010-3826-9988', '중간': 50, '최종': '??' },
+        { '이름': '나대연', '생년월일': '671211', '통신사': 'SKT', '휴대폰': '010-9393-5472', '중간': 90, '최종': 100 },
+        { '이름': '', '생년월일': '', '통신사': 'SKT', '휴대폰': '', '중간': 0, '최종': 0 },
+        { '이름': '', '생년월일': '', '통신사': 'SKT', '휴대폰': '', '중간': 0, '최종': 0 },
+        { '이름': '', '생년월일': '', '통신사': 'SKT', '휴대폰': '', '중간': 0, '최종': 0 },
+        { '이름': '', '생년월일': '', '통신사': 'SKT', '휴대폰': '', '중간': 0, '최종': 0 },
+        { '이름': '', '생년월일': '', '통신사': 'SKT', '휴대폰': '', '중간': 0, '최종': 0 },
+        { '이름': '', '생년월일': '', '통신사': 'SKT', '휴대폰': '', '중간': 0, '최종': 0 },
+        { '이름': '', '생년월일': '', '통신사': 'SKT', '휴대폰': '', '중간': 0, '최종': 0 },
+        { '이름': '', '생년월일': '', '통신사': 'SKT', '휴대폰': '', '중간': 0, '최종': 0 }
+    ]
+    console.log(list_sindo)
+</script>
+
+<body class="body">
+    <!-- 기본교육사이트 로그인 페이지 -->
+    <div>
+        <h1>2023년 1분기 법정교육</h1>
+<!--         <h5>1.듀얼탭 열기(주소창 옆) <br>
+            <img src="../image/ex_dualTab.JPG" alt="">
+        </h5>
+        <div class="img_dualTab">
+            <p></p>
+        </div> -->
+        <!-- 기본교육사이트 로그인 페이지 -->
+        <!-- <div>
+        <a href="https://www.ikec.co.kr/member/login_motp.php">☞교육사이트열기(듀얼탭 열고 클릭!!)</a>  
+        </div> -->
+
+        <!-- 법정교육사이트 로그인 페이지 -->
+        <div>
+            <a href="https://www.eledu.co.kr/member/login.php" target="_blank">☞교육사이트열기</a>
+            <br><br>
+        </div>
+    </div>
+
+
+    <div class="box_edu">
+        <div class="box_edu_co">
+            <h3>(주)성진환경건설</h3>
+            <ol> <!-- 완료시 input 태그 안에 checked  -->
+                <li class="list">유경원 대표이사 (완료<input checked type="checkbox" name="교육완료" id="">)</li>
+                <li class="list">유영창 sje670930 (완료<input checked type="checkbox" name="교육완료" id="">)</li>
+                <li class="list">나대연 sje671211 (완료<input checked type="checkbox" name="교육완료" id="">)</li>
+                <li class="list">유봉이 sje391104 (완료<input checked type="checkbox" name="교육완료" id="">)</li>
+                <li class="list">고희숙 sje771225 (완료<input checked type="checkbox" name="교육완료" id="">)</li>
+                <li class="list">윤자원 sje520105 (완료<input checked type="checkbox" name="교육완료" id="">)</li>
+                <li class="list">조민호 sje600601 (완료<input checked type="checkbox" name="교육완료" id="">)</li>
+                <li class="list">공태현 sje680904 (완료<input checked type="checkbox" name="교육완료" id="">)</li>
+                <li class="list">나원기 sje610220 (완료<input checked type="checkbox" name="교육완료" id="">)</li>
+                <!-- <li class="list">김학수 sje750122 본인명의휴대폰없음</li> -->
+            </ol>
+        </div>
+        <div class="box_edu_co">
+            <h3>(주)신도환경</h3>
+
+            <ol>
+                <li class="list">송용민 대표이사 (완료<input type="checkbox" name="교육완료" id="" checked>)</li>
+                <li class="list">정도영 sindo690304 (완료<input checked type="checkbox" name="교육완료" id="">)</li>
+                <li class="list">장원경 sindo791215 (완료<input checked type="checkbox" name="교육완료" id="">)</li>
+                <li class="list">김봉구 sindo590615 (완료<input checked  type="checkbox" name="교육완료" id="">)</li>
+                <li class="list">박혁 sindo630329 (완료<input checked  type="checkbox" name="교육완료" id="">)</li>
+                <li class="list">최무권 sindo590815 (완료<input checked  type="checkbox" name="교육완료" id="">)</li>
+                <li class="list">김주현 sindo910320 (완료<input checked  type="checkbox" name="교육완료" id="">)</li>
+                <li class="list">김형진 sindo560620 (완료<input checked  type="checkbox" name="교육완료" id="">)</li>
+            </ol>
+        </div>
+        <!-- 사무직 정기안전보건교육 1Q 학습자료 연결 -->
+
+    </div>
+    <br>
+
+    <div>
+        <a href="사무직 정기안전보건교육 1Q 학습자료(1~3차시).pdf" target="_blank">☞사무직 정기안전보건교육 1Q 학습자료 연결</a>
+        <br>
+        <ol>
+            
+        </ol>
+    </div> 
+</body>
+
+</html>
